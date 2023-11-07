@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <time.h>
 namespace List
 {
 	template<typename T>
@@ -197,9 +196,9 @@ namespace List
 		return out;
 	}
 	template<> LinkedList<int>::LinkedList(const size_t amount):_head(nullptr), _tail(nullptr), _size(0)
-	{
-		srand(time(NULL));
-		for (int i = 0; i < amount; ++i)
+	{		
+		push_tail(1 + rand() % (10 - 1));
+		for (int i = 1; i < amount; ++i)
 		{
 			push_tail( rand() % 10);
 		}

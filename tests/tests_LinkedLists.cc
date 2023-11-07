@@ -145,9 +145,5 @@ TEST(LinkedListTests, Delete_node)
     EXPECT_EQ(l.size(), 2);
     EXPECT_EQ(l[0], 2);
     EXPECT_EQ(l[1], 2);
-}
-TEST(LinkedListTests, Rand_values)
-{
-    LinkedList<int> number(10);
-    cout << number;
+
 }
