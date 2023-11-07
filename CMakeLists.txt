@@ -26,7 +26,7 @@ add_library(LinkedList-v1 INTERFACE "include/LinkedList.h")
 target_include_directories(LinkedList-v1 INTERFACE "include")
 
 add_executable(LinkedList-v1-main  "App/main.cc" )
-target_link_libraries(LinkedList-v1-main PolyLine-v1)
+target_link_libraries(LinkedList-v1-main LinkedList-v1)
 
-add_executable(LinkedList-v1-tests "test/tests_LinkedList.cc")
+add_executable(LinkedList-v1-tests "tests/tests_LinkedLists.cc")
 target_link_libraries(LinkedList-v1-tests LinkedList-v1 GTest::gtest_main)
